@@ -1,0 +1,83 @@
+/* SYNLAB Nigeria market-intelligence dashboard - blue-only theme */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+
+:root {
+  --synlab-cerulean: #0077AD; --synlab-midnight: #003765; --synlab-halfbaked: #7CB8D3;
+  --synlab-navy: #0A2647; --synlab-blue-medium: #205295; --synlab-blue-light: #2C8FC7;
+  --synlab-slate: #64748B; --synlab-bg-light: #F1F5F9; --synlab-border: #E2E8F0;
+}
+
+.stApp { background-color: #F8FAFC; }
+.main > div, .block-container { max-width: 1400px !important; margin: 0 auto; padding-left: 32px; padding-right: 32px; }
+.block-container { padding-top: 1.2rem; }
+
+/* header banner */
+.page-header {
+  background: linear-gradient(135deg, var(--synlab-midnight) 0%, var(--synlab-cerulean) 100%);
+  color: white; padding: 24px 32px; border-radius: 10px; margin-bottom: 18px;
+}
+.page-header h1 { margin: 0; font-size: 26px; font-weight: 700; color: white; }
+.page-header p { margin: 4px 0 0; opacity: 0.85; font-size: 14px; color: white; }
+
+/* section titles and captions */
+.section-title {
+  font-size: 13px; font-weight: 700; color: var(--synlab-midnight); text-transform: uppercase;
+  letter-spacing: 0.5px; margin: 22px 0 8px 0;
+}
+.filter-label { font-size: 11.5px; font-weight: 700; color: var(--synlab-slate); text-transform: uppercase; letter-spacing: 0.5px; }
+.chart-caption { font-size: 12px; color: var(--synlab-slate); margin: 2px 0 10px 0; }
+.empty-note { background: white; border: 1px dashed var(--synlab-border); border-radius: 10px; padding: 24px; text-align: center; color: var(--synlab-slate); font-size: 13px; }
+
+/* data-quality banner */
+.dq-banner { background: #FFF7ED; border: 1px solid #FED7AA; border-left: 4px solid #F59E0B; color: #7C2D12;
+  border-radius: 8px; padding: 8px 14px; font-size: 12.5px; margin: 8px 0 14px 0; }
+.dq-banner.dq-on { background: #EFF6FF; border-color: #BFDBFE; border-left-color: var(--synlab-cerulean); color: var(--synlab-midnight); }
+
+/* metric cards */
+.metric-card {
+  background: white; border-radius: 10px; padding: 18px 20px; border: 1px solid var(--synlab-border);
+  border-top: 4px solid var(--synlab-cerulean); text-align: center; height: 100%;
+  display: flex; flex-direction: column; justify-content: center; min-height: 118px;
+}
+.metric-card .metric-value { font-size: 28px; font-weight: 700; color: var(--synlab-midnight); margin: 4px 0; line-height: 1.2; }
+.metric-card .metric-label { font-size: 11.5px; color: var(--synlab-slate); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; }
+.metric-card .metric-sub { font-size: 12px; color: #475569; margin-top: 4px; }
+.metric-excellent { border-top-color: #003765; }
+.metric-good { border-top-color: #0077AD; }
+.metric-average { border-top-color: #205295; }
+.metric-attention { border-top-color: #7CB8D3; }
+.metric-small .metric-value { font-size: 22px; }
+
+/* insight / recommendation cards */
+.insight-card {
+  background: #FFFFFF; border-radius: 10px; padding: 18px 20px; border: 1px solid var(--synlab-border);
+  border-left: 4px solid var(--synlab-cerulean); height: 100%; min-height: 170px;
+}
+.insight-header { display: flex; align-items: baseline; gap: 8px; margin-bottom: 6px; }
+.insight-number { font-size: 16px; font-weight: 700; color: var(--synlab-cerulean); }
+.insight-title { font-weight: 700; color: var(--synlab-midnight); font-size: 15px; }
+.insight-desc { font-size: 13px; color: #475569; line-height: 1.55; margin: 0 0 10px 0; }
+.insight-tag { display: inline-block; background: var(--synlab-bg-light); padding: 3px 8px; border-radius: 4px; font-size: 11px;
+  color: var(--synlab-midnight); font-weight: 600; border: 1px solid var(--synlab-border); }
+
+/* SWOT grid */
+.swot-card { background: white; border: 1px solid var(--synlab-border); border-radius: 10px; padding: 16px 20px; height: 100%; min-height: 190px; }
+.swot-card h4 { margin: 0 0 8px 0; font-size: 14px; color: white; display: inline-block; padding: 3px 10px; border-radius: 6px; }
+.swot-s h4 { background: var(--synlab-midnight); } .swot-w h4 { background: var(--synlab-blue-medium); }
+.swot-o h4 { background: var(--synlab-cerulean); } .swot-t h4 { background: var(--synlab-halfbaked); color: var(--synlab-midnight); }
+.swot-card ul { margin: 6px 0 0 0; padding-left: 18px; font-size: 13px; color: #475569; line-height: 1.55; }
+
+/* tables */
+.stDataFrame { border: 1px solid var(--synlab-border); border-radius: 8px; }
+
+/* nav links */
+[data-testid="stPageLink"] a { border: 1px solid var(--synlab-border); background: white; border-radius: 8px; justify-content: center; }
+[data-testid="stPageLink"] a:hover { border-color: var(--synlab-cerulean); }
+
+@media (max-width: 900px) {
+  .metric-card .metric-value { font-size: 24px; }
+  .page-header { padding: 16px 20px; } .page-header h1 { font-size: 20px; }
+  .block-container { padding-left: 16px; padding-right: 16px; }
+}
