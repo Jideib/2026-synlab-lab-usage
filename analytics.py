@@ -222,7 +222,7 @@ def executive_summary(X, tab, stats, outcome_key):
 
     reg = "Lagos (vs Abuja)"
     if reg in eff and reg in clear and abs(eff[reg]) >= 25:
-        sections.append(("Caution", ["The Lagos versus Abuja gap is unusually large. Confirm it with field checks before building strategy on it."]))
+        sections.append(("Caution", ["The Lagos versus Abuja gap is unusually large. An ease-in approach can be used for both cities"]))
     return sections
 
 
